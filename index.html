@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- 'lang="id"' memberitahu browser & screen reader bahwa isi halaman berbahasa Indonesia -->
+<html lang="id">
+<head>
+  <!-- WAJIB: charset harus baris pertama di <head> -->
+  <meta charset="UTF-8">
+  <!-- WAJIB: viewport supaya tampilan responsif di HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO & Meta tags (15%) -->
+  <title>Revan Jeremia Manalu — Landing Page Pribadi</title>
+  <meta name="description" content="Landing page pribadi Revan Jeremia Manalu, mahasiswa Pemrograman Web Unimed. Kenali profil, skill, dan cara menghubungi saya.">
+
+  <!-- BONUS: Open Graph tags, muncul saat link dibagikan di WhatsApp/Sosmed -->
+  <meta property="og:title" content="Revan Jeremia Manalu — Landing Page Pribadi">
+  <meta property="og:description" content="Portofolio pribadi & cara menghubungi saya.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/foto-profil.jpg">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER + NAV ================= -->
+  <header>
+    <h1>Revan Jeremia Manalu</h1>
+    <p class="tagline">Mahasiswa Ilmu Komputer</p>
+
+    <!-- Link navigasi wajib mengarah ke id section (anchor) -->
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+
+    <!-- Section 1: Tentang Saya -->
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <article>
+        <h3>Perkenalan Singkat</h3>
+        <p>
+          Saya Revan Jeremia Manalu, seorang mahasiswa Ilmu Komputer di Universitas Medan (Unimed). Saya sedang mengembangkan kemampuan dalam bidang Pemrograman Web.
+        </p>
+        <!-- BONUS: <time> untuk tanggal, contoh tanggal mulai kuliah -->
+        <p>Mulai kuliah sejak <time datetime="2025-08-15">Agustus 2025</time>.</p>
+      </article>
+    </section>
+
+    <!-- Section 2: Skill -->
+    <section id="skill">
+      <h2>Skill & Kemampuan</h2>
+      <ul class="skill-list">
+        <li>HTML5 &amp; CSS3</li>
+        <li>JavaScript Dasar</li>
+        <li>Git &amp; GitHub</li>
+        <li>Desain UI Sederhana</li>
+      </ul>
+    </section>
+
+    <!-- Section 3: Galeri — wajib ada gambar dengan alt + figcaption -->
+    <section id="galeri">
+      <h2>Galeri</h2>
+      <figure>
+        <img src="images/foto-profil.jpg"
+             alt="Foto Nama Kamu sedang tersenyum di depan laptop, mengenakan kemeja kasual">
+        <figcaption>Sesi foto saat mengerjakan tugas Pemrograman Web.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Section 4: Kontak — form interaktif dengan validasi -->
+    <section id="kontak">
+      <h2>Hubungi Saya</h2>
+      <form action="#" method="post">
+
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required minlength="3"
+                 placeholder="Masukkan nama kamu">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required
+                 placeholder="nama@email.com">
+        </div>
+
+        <!-- BONUS: input type khusus -->
+        <div class="form-group">
+          <label for="tanggal-lahir">Tanggal Lahir</label>
+          <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+        </div>
+
+        <div class="form-group">
+          <label for="warna-favorit">Warna Favorit</label>
+          <input type="color" id="warna-favorit" name="warna-favorit" value="#2b6777">
+        </div>
+
+        <div class="form-group">
+          <label for="level-skill">Level Skill HTML (1–10)</label>
+          <input type="range" id="level-skill" name="level-skill" min="1" max="10" value="5">
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4" required
+                    placeholder="Tulis pesan kamu di sini"></textarea>
+        </div>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>&copy; <time datetime="2026">2026</time> Revan Jeremia Manalu. Semua hak cipta dilindungi.</p>
+  </footer>
+
+</body>
+</html>
